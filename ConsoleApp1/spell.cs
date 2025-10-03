@@ -1,3 +1,4 @@
+namespace GameData;
 public class Spell
 {
     public string Name { get; set; }

@@ -5,26 +5,21 @@ using System.Security.Cryptography.X509Certificates;
 // Esatablish SpellInstruction namespace.
 namespace SpellInstruction;
 
+using System.Security;
+using GameData;
+
 public class Instruction
 {
-
-    // From Spell class file, create new objects for different spells.
-    static Spell protego = new Spell("Protego", "Defensive", "You raise your wand quickly, whispering \"Protego\" to block the incoming spell.", 3);
-    static Spell stupefy = new Spell("Stupefy", "Offensive", "You aim at your opponent and shout \"Stupefy!\", stunning it and launching it backwards.", 3);
-    static Spell expelliarmus = new Spell("Expelliarmus", "Disarming", "With a sharp flick, you cast \"Expelliarmus!\" and the opponent's want flew from their hand.", 3);
-
-    // Store all Spell objects in a list for easy access.
-    static List<Spell> spells = new List<Spell> { protego, stupefy, expelliarmus };
-
     // Function to display Spell Instruction program.
-    public static void Display()
+    public static void Display(User player)
     {
         // Create loop for user to practice spells.
         bool spellLoop = true;
 
         while (spellLoop)
         {
-             Console.WriteLine("\nPull out your wand and put your books away, it's time to practice!\n");
+            Console.WriteLine("\nPull out your wand and put your books away, it's time to practice!\n");
+            var spells = player.LearnedSpells;
 
             //Display all spells in list
             for (int i = 0; i < spells.Count; i++)
@@ -60,13 +55,25 @@ public class Instruction
                 {
                     increase = 1;
                 }
-                
+
                 Console.WriteLine($"\n{selected.Text}");
-                Console.WriteLine($"Well done! You have increased {selected}'s power by  {increase}");
-                selected.Value += increase;
+                Console.Write($"Type \"{selected.Name}!\" ");
+                string _correctName = Console.ReadLine();
+
+                if (_correctName == $"{selected.Name}!")
+                {
+                    Console.WriteLine($"Well done! You have increased {selected.Name}'s power by {increase}");
+                    selected.Value += increase;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input.");
+                }
+               
             }
         }
-
     }
+
+    
 
 }
