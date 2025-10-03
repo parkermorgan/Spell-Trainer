@@ -1,0 +1,18 @@
+{
+  "Name": "Parker",
+  "Defeated": 0,
+  "Spells": [
+    {
+      "Name": "Protego",
+      "Value": 4.5
+    },
+    {
+      "Name": "Stupefy",
+      "Value": 5
+    },
+    {
+      "Name": "Expelliarmus",
+      "Value": 4
+    }
+  ]
+}
