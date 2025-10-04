@@ -1,0 +1,47 @@
+{
+  "Name": "Albus Dumbledore",
+  "Health": 100,
+  "Defeated": 0,
+  "Spells": [
+    {
+      "Name": "Protego",
+      "Type": "Defensive",
+      "Text": "You raise your wand quickly, whispering \u0022Protego\u0022 to block the incoming spell.",
+      "Value": 10
+    },
+    {
+      "Name": "Stupefy",
+      "Type": "Offensive",
+      "Text": "You aim at your opponent and shout \u0022Stupefy!\u0022, stunning it and launching it backwards.",
+      "Value": 10
+    },
+    {
+      "Name": "Expelliarmus",
+      "Type": "Disarming",
+      "Text": "With a sharp flick, you cast \u0022Expelliarmus!\u0022 and the opponent\u0027s wand flew from their hand.",
+      "Value": 10
+    }
+  ],
+  "Enemies": [
+    {
+      "Name": "Dementor",
+      "Health": 20,
+      "Damage": 5
+    },
+    {
+      "Name": "Troll",
+      "Health": 30,
+      "Damage": 7
+    },
+    {
+      "Name": "Spider",
+      "Health": 10,
+      "Damage": 2
+    },
+    {
+      "Name": "Death Eater",
+      "Health": 50,
+      "Damage": 9
+    }
+  ]
+}
