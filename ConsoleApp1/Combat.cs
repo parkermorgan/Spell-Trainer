@@ -37,7 +37,7 @@ public class Combat
 
                 // Select enemy from list.
                 var randomEnemy = player.Enemies[index];
-                Console.WriteLine($"It's a {randomEnemy.Name}!\n{randomEnemy.Health}'s Health: {randomEnemy.Health}, Damage: {randomEnemy.Damage}");
+                Console.WriteLine($"It's a {randomEnemy.Name}!\n{randomEnemy.Name}'s Health: {randomEnemy.Health}, Damage: {randomEnemy.Damage}");
 
                 // Establish battle loop.
                 bool battleLoop = true;

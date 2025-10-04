@@ -1,7 +1,7 @@
 {
   "Name": "Albus Dumbledore",
-  "Health": 100,
-  "Defeated": 0,
+  "Health": 98,
+  "Defeated": 1,
   "Spells": [
     {
       "Name": "Protego",
@@ -32,11 +32,6 @@
       "Name": "Troll",
       "Health": 30,
       "Damage": 7
-    },
-    {
-      "Name": "Spider",
-      "Health": 10,
-      "Damage": 2
     },
     {
       "Name": "Death Eater",
